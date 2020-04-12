@@ -59,36 +59,201 @@ Google V8 团队的技术博客（Blog）是理解V8架构和实现细节、后�
 ### 053
 ### 052
 ### 051
-### 050
-### 049
-### 048
-### 047
-### 046
-### 045
-### 044
-### 043
-### 042
-### 041
-### 040
-### 039
-### 038
-### 037
-### 036
-### 035
-### 034
-### 033
-### 032
-### 031
-### 030
-### 029
-### 028
-### 027
-### 026
-### 025
-### 024
-### 023
-### 022
-### 021
+### 050 V8 release v6.3
+Published 25 October 2017 · tagged with release
+
+可以不看。
+
+### 049 Optimizing ES2015 proxies in V8
+Published 05 October 2017 · tagged with ECMAScript benchmarks internals
+
+需要看。
+
+### 048 An internship on laziness: lazy unlinking of deoptimized functions
+Published 04 October 2017 · tagged with memory internals
+
+这位同学的PPT很魔性😄推荐看看。
+
+### 047 Temporarily disabling escape analysis
+Published 22 September 2017 · tagged with security
+
+不用看了。
+
+### 046 Elements kinds in V8
+Published 12 September 2017 · tagged with internals presentations
+
+视频我搬运到了B站，可以组合看下，如果是编译领域从业，对JS不熟悉的话，可以解惑：
+
+Mathias Bynens - V8 internals for JavaScript developers
+https://www.bilibili.com/video/BV1oJ411J7j1
+
+### 045 V8 release v6.2
+Published 11 September 2017 · tagged with release
+
+不用看。
+
+### 044 Fast properties in V8
+Published 30 August 2017 · tagged with internals
+
+需要看。
+
+### 043 About that hash flooding vulnerability in Node.js…
+Published 11 August 2017 · tagged with security
+
+不做安全的话不用看，已经过去了。
+
+### 042 V8 release v6.1
+Published 03 August 2017 · tagged with release
+
+不用看。
+
+
+### 041 V8 release v6.0
+Published 09 June 2017 · tagged with release
+
+不用看。
+
+### 040 Launching Ignition and TurboFan
+Published 15 May 2017 · tagged with internals
+
+第一次接触V8的需要看一下。
+
+那个logo应该不是一个灯笼，是两个火花装置尖端放电？
+### 039 V8 release v5.9
+Published 27 April 2017 · tagged with release
+
+v5.9 开始启用了 Igniton + TurboFan。
+
+### 038 Retiring Octane
+Published 12 April 2017 · tagged with benchmarks
+
+不用看。其实我们还是在用 Octane 的。
+
+### 037 V8 release v5.8
+Published 20 March 2017 · tagged with release
+
+可以不看。
+
+### 036 Fast for-in in V8
+Published 01 March 2017 · tagged with internals
+
+需要看一下。涉及到 for-in 的内部处理。性能提升部分不用细看，看原理就行。
+
+### 035 High-performance ES2015 and beyond
+Published 17 February 2017 · tagged with ECMAScript
+
+不用看。
+
+### 034 Help us test the future of V8!
+Published 14 February 2017 · tagged with internals
+
+不用看。
+
+### 033 One small step for Chrome, one giant heap for V8
+Published 09 February 2017 · tagged with memory
+
+Dev工具改进，感知内存压力并自动停止，防止对V8的堆造成压力。
+
+我们目前是只做V8的话不用看这篇。以后做Chromium的时候需要关注下是不是还是当前的实现。
+
+### 032 V8 release v5.7
+Published 06 February 2017 · tagged with release
+
+启用了 webassemly。 其它主要是性能改进。
+
+### 031 Speeding up V8 regular expressions
+Published 10 January 2017 · tagged with internals RegExp
+
+从 v5.7 开始ship新的regexp，从第三方的库实现，转移到了turbofan中，使用CSA形式。
+
+具体RE这部分实现我还没看。目前感觉不需要阅读。
+
+### 030 How V8 measures real-world performance
+Published 21 December 2016 · tagged with benchmarks
+
+在做性能测试之前需要阅读下这篇博客，给出了比技术分享视频更加简洁的 brief history。
+
+### 029 V8 ❤️ Node.js
+Published 15 December 2016 · tagged with Node.js
+
+好的好的。可以在 DevTools 中对 Node.js 进行调试。
+
+### 028 V8 release v5.6
+Published 02 December 2016 · tagged with release
+
+是个大版本更新。Ignition/TurboFan的两阶段架构开始启用，原有的Crankshaft在后续的版本中被移除了。
+内存的性能改进还是围绕着 Orinoco GC 的改进进行。这部分更小众，暂时没有关注。
+速度优化覆盖了一系列原先加入的ES6特性（估计是跟各个浏览器厂商在PK的结果）。
+
+相关阅读：
+https://benediktmeurer.de/2016/11/25/v8-behind-the-scenes-november-edition/
+
+
+### 027 WebAssembly browser preview
+Published 31 October 2016 · tagged with WebAssembly
+
+联合几个浏览器大厂宣布了 WebAssembly。
+由于目前我们还没有关注到 WebAssembly，暂时没有评论。
+时至今日wasm还是作为一个输入进入 turbofan 的。所以在 turbofan 的知识是共用的。
+
+### 026 V8 release v5.5
+Published 24 October 2016 · tagged with release
+
+语言特性介绍了 async functions，继续改进了内存优化。
+
+> The V8 inspector was migrated from Chromium to V8. The inspector code now fully resides in the V8 repository.
+
+### 025 Optimizing V8 memory consumption
+Published 07 October 2016 · tagged with memory benchmarks
+
+介绍了Chrome/V8模拟在野评测的评测的方法。
+
+提供了新的 V8 heap visualizer，同时介绍了内存优化的几个技术概述。
+如果是做浏览器或者后续的嵌入式的环境的话，或许需要看一看。
+
+有关 Tracing 的内容可以进一步从
+https://www.chromium.org/developers/how-tos/trace-event-profiling-tool
+获得。
+
+### 024 V8 release v5.4
+Published 09 September 2016 · tagged with release
+
+本次发布没有说ES6特性，主要是性能和内存改进的说明。
+
+### 023 Firing up the Ignition interpreter 23 August 2016 internals
+
+技术细节可以参考
+BlinkOn 6 Day 1 Talk 2- Ignition - an interpreter for V8
+https://www.bilibili.com/video/BV15J411J7Gf/
+
+以及V8的文档中的ignition部分。
+
+### 022 V8 at the BlinkOn 6 conference
+Published 21 July 2016 · tagged with presentations
+
+会议内容有价值，值得观看。
+油管内容已经搬运到B站：
+
+Real-world JavaScript performance
+https://www.bilibili.com/video/BV1e54y1d7HX/
+
+BlinkOn 6 Day 1 Talk 2- Ignition - an interpreter for V8
+https://www.bilibili.com/video/BV15J411J7Gf/
+
+How we measure and optimize for RAIL in V8’s GC #
+
+
+ECMAScript 2015 and beyond
+
+Tracing wrappers from V8 to Blink (lightning talk)
+
+
+### 021 V8 release v5.3
+Published 18 July 2016 · tagged with release
+
+启用了 Ignition 解释器。
+
+
 ### 020 V8 release v5.2
 Published 04 June 2016 · tagged with release
 
